@@ -1,0 +1,53 @@
+unit
+class Ladder
+%The Ladder Class is essentially a set of coordinates. Sprites don't mix well.
+export setPosition, getX, getY, canClimb, canAccess, wreck, fix, isBroken
+    % instance variables
+    var px,py : int
+    var broken : boolean := false
+
+    procedure wreck
+	broken := true
+    end wreck
+    
+    proc fix
+	broken := false
+    end fix
+    
+    function isBroken : boolean
+	result broken
+    end isBroken
+    
+    procedure setPosition (x, y : int)
+	px := x
+	py := y
+    end setPosition
+    
+    function getX : int
+	result px
+    end getX
+    
+    function getY : int
+	result py
+    end getY
+    
+    function canClimb(x,y : int) : boolean % checks if player is in prox
+	if broken then
+	    result false
+	elsif x - px < 24 and x - px > -24 then
+	    if y - py < 190 and y - py > -150 then
+		result true
+	    end if
+	end if
+	result false
+    end canClimb
+    
+    function canAccess(x,y : int) : boolean % this doesn't care about broken
+	if x - px < 12 and x - px > -12 then
+	    if y > py and y - py < 190 then
+		result true
+	    end if
+	end if
+	result false
+    end canAccess
+end Ladder

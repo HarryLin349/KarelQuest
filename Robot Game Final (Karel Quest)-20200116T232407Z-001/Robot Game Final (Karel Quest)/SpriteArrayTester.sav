@@ -1,0 +1,15 @@
+var JumpR : int := Pic.FileNew ("JumpR.bmp")
+var spritearray : array 1 .. 22 of int
+
+for i : 1 .. 22
+    spritearray (i) := Sprite.New (JumpR)
+    Sprite.Show (spritearray (i))
+    Sprite.SetHeight (spritearray (i), 1)
+end for
+
+for i : 1 .. 22
+    Sprite.SetPosition (spritearray (i), i * 12, 200, true)
+end for
+
+put spritearray(1)
+put spritearray(2)

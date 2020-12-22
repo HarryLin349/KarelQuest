@@ -1,0 +1,161 @@
+unit
+class Barrel
+%Barrel is a set of coords that handles all the logic for barrels in game. It draws itself.
+export setPosition, nextFrame, move, draw, reverseDirection, randDirection, setDirection, getX, getY, activate, disable, getState, onGround, grounder, faller, goDown, direction, onThingy, onThing, offThing, setSide, side, setScore, scoredOn
+    % instance variables
+    
+    var spark1 : int := Pic.FileNew ("Barrel1.bmp")
+    var spark2 : int := Pic.FileNew ("Barrel2.bmp")
+    var spark3 : int := Pic.FileNew ("Barrel3.bmp")
+    var spark4 : int := Pic.FileNew ("Barrel4.bmp")
+    var spark5 : int := Pic.FileNew ("Barrel5.bmp")
+    var spark6 : int := Pic.FileNew ("Barrel6.bmp")
+    var barrelSprite : int := Sprite.New(spark1)
+    Sprite.Show (barrelSprite)
+    Sprite.SetHeight (barrelSprite, 2) 
+    
+    var side : int
+    var scoredOn : boolean := false
+
+    var frame  : int := 1 
+    var onThingy : boolean := false
+    
+    var px,py : int := 21
+    var dx : int := 4
+    var dy : int := 4
+    const LEFT : string := "Left"
+    const RIGHT : string := "Right"
+    const DOWN : string := "Down"
+    
+    var random : int
+    var random2 : int 
+    var direction : string := DOWN
+
+    var isActive : boolean := false
+    var onGround : boolean := false
+    
+    proc grounder
+	onGround := true
+    end grounder
+    
+    proc setSide(num :int)
+	side := num
+    end setSide
+    proc faller 
+	onGround := false
+    end faller
+    
+    function getState : boolean
+	result isActive
+    end getState
+
+    procedure setPosition (x, y : int)
+	px := x
+	py := y
+    end setPosition
+    
+    proc onThing
+	onThingy := true
+    end onThing
+    
+    proc offThing
+	onThingy := false
+    end offThing
+    
+    proc nextFrame
+	frame += 1
+	if frame > 6 then
+	    frame := 1
+	end if
+    end nextFrame
+    
+    proc move 
+	if isActive then
+	    if direction = LEFT then
+		px -= dx
+	    elsif direction = RIGHT then
+		px += dx
+	    elsif direction = DOWN then
+		py -= dy
+	 end if
+	end if
+    end move
+    
+    proc activate
+	isActive := true
+	Sprite.Show(barrelSprite)
+    end activate
+    
+    proc disable
+	isActive := false
+	Sprite.Hide(barrelSprite)
+    end disable
+    
+    proc setScore (b : boolean)
+	scoredOn := b 
+    end setScore
+    
+    proc draw% Pics don't work in arrays.
+	if frame = 1 then
+	    Sprite.ChangePic(barrelSprite, spark1)
+	    Sprite.SetPosition (barrelSprite, px, py, true)
+	elsif frame = 2 then
+	    Sprite.ChangePic(barrelSprite, spark2)
+	    Sprite.SetPosition (barrelSprite, px, py, true)
+	elsif frame = 3 then
+	    Sprite.ChangePic(barrelSprite, spark3)
+	    Sprite.SetPosition (barrelSprite, px, py, true)
+	elsif frame = 4 then
+	    Sprite.ChangePic(barrelSprite, spark4)
+	    Sprite.SetPosition (barrelSprite, px, py, true)
+	elsif frame = 5 then
+	    Sprite.ChangePic(barrelSprite, spark5)
+	    Sprite.SetPosition (barrelSprite, px, py, true)
+	else
+	    Sprite.ChangePic(barrelSprite, spark6)
+	    Sprite.SetPosition (barrelSprite, px, py, true)
+	end if
+    end draw
+    
+    proc reverseDirection
+	if direction = LEFT then
+	    direction := RIGHT
+	elsif direction = RIGHT then
+	    direction := LEFT
+	end if
+    end reverseDirection
+    
+    proc goDown
+	randint(random2, 1, 2)
+	if random = 1 then
+	    direction := DOWN
+	end if
+    end goDown
+    
+    proc randDirection
+	randint(random, 1,2)
+	if random = 1 then
+	    direction := RIGHT
+	else
+	    direction := LEFT
+	end if
+    end randDirection
+    
+    proc setDirection (str : string)
+	direction := str
+    end setDirection
+    
+    function distanceFrom(x1,y1 : int) : int
+	result round (sqrt ((px - x1) ** 2 + (py - y1) ** 2))
+    end distanceFrom
+    
+    function getX : int
+	result px
+    end getX
+    
+    function getY : int
+	result py
+    end getY
+
+    
+end Barrel

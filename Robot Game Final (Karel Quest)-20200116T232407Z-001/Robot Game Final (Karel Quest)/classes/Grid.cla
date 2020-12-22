@@ -1,0 +1,127 @@
+unit 
+class Grid
+export draw, erase, isInside, setxyPosition, setHorizontalSize, setVerticalSize, setColor, setNumCols, setNumRows, setCentertobeCenter
+
+var llx, lly : int := 100
+var rows, cols : int := 3 
+
+var col : int := black 
+var hsize, vsize : int := 50
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+proc draw 
+
+for i : 0 .. rows
+Draw.Line (llx + (i * hsize), lly, llx + (i * hsize), lly + (cols * vsize), col)
+
+
+end for
+
+
+for i : 0 .. cols
+Draw.Line (llx, lly + (i* vsize), llx + (rows * hsize), lly + (i * vsize), col)
+
+
+end for
+end draw
+
+proc erase
+var temp : int := col
+col := colorbg
+draw 
+col := white 
+end erase
+
+%%%%%%%%%%%%%% sets = mutator communicator method %%%%%%%%%%%%%
+proc setxyPosition (a, b : int)
+if a > 0 and b > 0
+then
+llx := a
+lly := b 
+end if
+end setxyPosition
+
+proc setHorizontalSize (c : int)
+if c > 0 
+then
+hsize := c
+end if
+end setHorizontalSize
+
+proc setVerticalSize (d : int)
+if d > 0 
+then
+hsize := d
+end if
+end setVerticalSize
+
+proc setColor (e : int)
+if e > 0 and e < 256
+then
+col := e
+end if
+end setColor
+
+proc setCentertobeCenter (yn : boolean)
+
+if yn = true
+then
+llx := 320 - ((cols * hsize) div 2)
+lly := 240 - ((rows * vsize) div 2)
+end if
+end setCentertobeCenter
+
+proc setNumRows (f : int)
+if f > 0 
+then
+rows := f
+end if
+end setNumRows
+
+proc setNumCols (g : int)
+if g > 0 
+then
+cols := g
+end if
+end setNumCols
+
+%%%getting stuff
+
+fcn isInside (var llx, lly : int, px, py, cols, hsize, rows, vsize : int) : boolean
+
+var urx, ury : int
+urx := llx + (cols * hsize)
+ury := lly + (rows * vsize)
+
+if px >= llx and py >= lly and px <= urx and py <= ury
+then
+
+
+result true
+else
+result false
+end if
+end isInside
+
+proc getRowCol (var llx, lly, r, c : int, px, py, rows, cols, hsize, vsize, col: int) 
+
+var urx := llx + (cols * hsize)
+var ury := lly + (rows * vsize)
+
+if px >= llx and py >= lly and px <= urx and py <= ury
+then
+if (px - llx) mod hsize = 0 or (py - lly) mod vsize = 0
+then
+r := -1
+c := -1
+else
+r := ((px - llx) div hsize) + 1
+c := ((py - lly) div vsize) + 1
+end if
+else
+r := 0
+c := 0
+end if
+end getRowCol
+
+
+end Grid

@@ -1,0 +1,184 @@
+*** FATAL INTERNAL ERROR in Turing ***
+Date: Jan 9 2019 10:45 AM
+
+File Name: C:\Users\harry\Downloads\package\turing.exe
+Version: 1.0.1  [11]
+File Size: 4573696
+File Date: Jun 11 2012 11:35 PM
+Operating System: After Windows XP
+JVM: Ready Built-in JRE (1.4.2 or later)
+"assert" Statements: disabled
+
+
+Previous Operations:
+    Keystroke (2) - sz:414:11731 - slFr:2647 - slTo:2647 - nlA:0
+    Line Starts: 411:11699 412:11708 413:11727 414:11731
+  CMD: WM_INITMENU (W)
+  CMD: COMMAND_PASTE
+    Paste (1) - Window: 105b8 - SelLen: 0
+    Insert Text (1) - Text: 27cb248 - size: 101 - clean: 0
+    Text - sz:414:11731 - slFr:96:0:2647 - slTo:96:0:2647 - nlA:0
+    Line Starts: 411:11699 412:11708 413:11727 414:11731
+    Insert Text (2) - numNewLines: 3
+    Insert Text (3) - sz:417:11829 - slFr:2745 - slTo:2745 - nlA:0
+    Line Starts: 414:11797 415:11806 416:11825 417:11829
+  CMD: WM_CHAR [#13] (D)
+    Keystroke - Text: 27cb248 - ch: 13
+    Text - sz:417:11829 - slFr:99:25:2745 - slTo:99:25:2745 - nlA:0
+    Line Starts: 414:11797 415:11806 416:11825 417:11829
+    Keystroke (2) - sz:418:11830 - slFr:2746 - slTo:2746 - nlA:0
+    Line Starts: 415:11798 416:11807 417:11826 418:11830
+  CMD: WM_CHAR [#8] (D)
+    Keystroke - Text: 27cb248 - ch: 8
+    Text - sz:418:11830 - slFr:100:0:2746 - slTo:100:0:2746 - nlA:0
+    Line Starts: 415:11798 416:11807 417:11826 418:11830
+    Keystroke (2) - sz:417:11829 - slFr:2745 - slTo:2745 - nlA:0
+    Line Starts: 414:11797 415:11806 416:11825 417:11829
+  CMD: WM_SETFOCUS (W)
+  CMD: WM_ACTIVATE (W)
+  CMD: WM_SETFOCUS (W)
+  CMD: WM_ACTIVATE (W)
+  CMD: WM_CHAR [#13] (D)
+    Keystroke - Text: 27cb248 - ch: 13
+    Text - sz:417:11829 - slFr:99:25:2745 - slTo:99:25:2745 - nlA:0
+    Line Starts: 414:11797 415:11806 416:11825 417:11829
+    Keystroke (2) - sz:418:11830 - slFr:2746 - slTo:2746 - nlA:0
+    Line Starts: 415:11798 416:11807 417:11826 418:11830
+  CMD: WM_CHAR [&] (D) (x1) [&]
+    Keystroke - Text: 27cb248 - ch: 38
+    Text - sz:418:11830 - slFr:100:0:2746 - slTo:100:0:2746 - nlA:0
+    Line Starts: 415:11798 416:11807 417:11826 418:11830
+    Keystroke (2) - sz:418:11831 - slFr:2747 - slTo:2747 - nlA:0
+    Line Starts: 415:11799 416:11808 417:11827 418:11831
+  CMD: WM_CHAR [#8] (D)
+    Keystroke - Text: 27cb248 - ch: 8
+    Text - sz:418:11831 - slFr:100:1:2747 - slTo:100:1:2747 - nlA:0
+    Line Starts: 415:11799 416:11808 417:11827 418:11831
+    Keystroke (2) - sz:418:11830 - slFr:2746 - slTo:2746 - nlA:0
+    Line Starts: 415:11798 416:11807 417:11826 418:11830
+  CMD: WM_CHAR [] (D) (x37) [%%%%%%%%%%%%%%%%%%]
+    Keystroke - Text: 27cb248 - ch: 37
+    Text - sz:418:11866 - slFr:100:36:2782 - slTo:100:36:2782 - nlA:0
+    Line Starts: 415:11834 416:11843 417:11862 418:11866
+    Keystroke (2) - sz:418:11867 - slFr:2783 - slTo:2783 - nlA:0
+    Line Starts: 415:11835 416:11844 417:11863 418:11867
+  CMD: WM_LBUTTONDOWN (D)
+    Set Selection (1) - Text: 27cb248 - L: 41 - C: 6
+    Text - sz:418:11867 - slFr:100:37:2783 - slTo:100:37:2783 - nlA:0
+    Line Starts: 415:11835 416:11844 417:11863 418:11867
+    Set Selection (2) - sz:418:11867 - slFr:1553 - slTo:1553 - nlA:0
+    Line Starts: 415:11835 416:11844 417:11863 418:11867
+  CMD: WM_LBUTTONUP (D)
+    Extend Selection - Text: 27cb248 - L: 41 - C: 6 (x1)
+    Text - sz:418:11867 - slFr:41:6:1553 - slTo:41:6:1553 - nlA:0
+    Line Starts: 415:11835 416:11844 417:11863 418:11867
+  CMD: COMMAND_MOVE/SELECT_LINE_DOWN
+    Move Line Down - Text: 27cb248 - Select: 1
+    Text - sz:418:11867 - slFr:1553 - slTo:1553 - nlA:0
+    Line Starts: 415:11835 416:11844 417:11863 418:11867
+  CMD: COMMAND_MOVE/SELECT_LINE_UP
+    Move Line Up - Text: 27cb248 - Select: 0
+    Text - sz:418:11867 - slFr:41:6:1553 - slTo:42:6:1591 - nlA:0
+    Line Starts: 415:11835 416:11844 417:11863 418:11867
+  CMD: WM_LBUTTONDOWN (D)
+    Set Selection (1) - Text: 27cb248 - L: 41 - C: 6
+    Text - sz:418:11867 - slFr:41:6:1553 - slTo:41:6:1553 - nlA:0
+    Line Starts: 415:11835 416:11844 417:11863 418:11867
+    Set Selection (2) - sz:418:11867 - slFr:1553 - slTo:1553 - nlA:0
+    Line Starts: 415:11835 416:11844 417:11863 418:11867
+    Extend Selection - Text: 27cb248 - L: 41 - C: 7 (x12)
+    Text - sz:418:11867 - slFr:1553 - slTo:1554 - nlA:0
+    Line Starts: 415:11835 416:11844 417:11863 418:11867
+  CMD: WM_LBUTTONUP (D)
+    Extend Selection - Text: 27cb248 - L: 41 - C: 7 (x1)
+    Text - sz:418:11867 - slFr:1553 - slTo:1554 - nlA:0
+    Line Starts: 415:11835 416:11844 417:11863 418:11867
+  CMD: WM_CHAR [2] (D) (x1) [2]
+    Keystroke - Text: 27cb248 - ch: 50
+    Text - sz:418:11867 - slFr:1553 - slTo:1554 - nlA:0
+    Line Starts: 415:11835 416:11844 417:11863 418:11867
+    Delete Selection (1) - Text: 27cb248
+    Text - sz:418:11867 - slFr:41:6:1553 - slTo:41:7:1554 - nlA:0
+    Line Starts: 415:11835 416:11844 417:11863 418:11867
+    Delete Selection (2) - From line: 41 - From col: 6 - To line: 41 - To col: 7
+    Delete Selection (3) - sz:418:11866 - slFr:1553 - slTo:1553 - nlA:0
+    Line Starts: 415:11834 416:11843 417:11862 418:11866
+    Keystroke (2) - sz:418:11867 - slFr:1554 - slTo:1554 - nlA:0
+    Line Starts: 415:11835 416:11844 417:11863 418:11867
+  CMD: COMMAND_MOVE/SELECT_COLUMN_LEFT
+    Move Column Left - Text: 27cb248 - Select: 0
+    Text - sz:418:11867 - slFr:41:7:1554 - slTo:41:7:1554 - nlA:0
+    Line Starts: 415:11835 416:11844 417:11863 418:11867
+  CMD: COMMAND_MOVE/SELECT_COLUMN_LEFT
+    Move Column Left - Text: 27cb248 - Select: 0
+    Text - sz:418:11867 - slFr:41:6:1553 - slTo:41:6:1553 - nlA:0
+    Line Starts: 415:11835 416:11844 417:11863 418:11867
+  CMD: WM_LBUTTONDOWN (D)
+    Set Selection (1) - Text: 27cb248 - L: 46 - C: 6
+    Text - sz:418:11867 - slFr:41:5:1552 - slTo:41:5:1552 - nlA:0
+    Line Starts: 415:11835 416:11844 417:11863 418:11867
+    Set Selection (2) - sz:418:11867 - slFr:1653 - slTo:1653 - nlA:0
+    Line Starts: 415:11835 416:11844 417:11863 418:11867
+    Extend Selection - Text: 27cb248 - L: 46 - C: 7 (x6)
+    Text - sz:418:11867 - slFr:1653 - slTo:1654 - nlA:0
+    Line Starts: 415:11835 416:11844 417:11863 418:11867
+  CMD: WM_LBUTTONUP (D)
+    Extend Selection - Text: 27cb248 - L: 46 - C: 7 (x1)
+    Text - sz:418:11867 - slFr:1653 - slTo:1654 - nlA:0
+    Line Starts: 415:11835 416:11844 417:11863 418:11867
+  CMD: WM_CHAR [3] (D) (x1) [3]
+    Keystroke - Text: 27cb248 - ch: 51
+    Text - sz:418:11867 - slFr:1653 - slTo:1654 - nlA:0
+    Line Starts: 415:11835 416:11844 417:11863 418:11867
+    Delete Selection (1) - Text: 27cb248
+    Text - sz:418:11867 - slFr:46:6:1653 - slTo:46:7:1654 - nlA:0
+    Line Starts: 415:11835 416:11844 417:11863 418:11867
+    Delete Selection (2) - From line: 46 - From col: 6 - To line: 46 - To col: 7
+    Delete Selection (3) - sz:418:11866 - slFr:1653 - slTo:1653 - nlA:0
+    Line Starts: 415:11834 416:11843 417:11862 418:11866
+    Keystroke (2) - sz:418:11867 - slFr:1654 - slTo:1654 - nlA:0
+    Line Starts: 415:11835 416:11844 417:11863 418:11867
+  CMD: COMMAND_MOVE/SELECT_LINE_UP
+    Move Line Up - Text: 27cb248 - Select: 0
+    Text - sz:418:11867 - slFr:46:7:1654 - slTo:46:7:1654 - nlA:0
+    Line Starts: 415:11835 416:11844 417:11863 418:11867
+  CMD: COMMAND_MOVE/SELECT_LINE_UP
+    Move Line Up - Text: 27cb248 - Select: 0
+    Text - sz:418:11867 - slFr:45:0:1646 - slTo:45:0:1646 - nlA:0
+    Line Starts: 415:11835 416:11844 417:11863 418:11867
+  CMD: COMMAND_MOVE/SELECT_LINE_DOWN
+    Move Line Down - Text: 27cb248 - Select: 0
+    Text - sz:418:11867 - slFr:44:7:1627 - slTo:44:7:1627 - nlA:0
+    Line Starts: 415:11835 416:11844 417:11863 418:11867
+  CMD: WM_INITMENU (W)
+  CMD: COMMAND_SAVE_FILE
+    Save File (1) - Window: 105b8 - SaveAs: 0 - Sel: 0 - fileno: 1 - sizeptr: 64b768
+    Save File (2) - name: C:\Users\harry\Documents\Turing\RoboGame\RobotGame.t - fileno: 1 - sizeptr: 64b768
+  CMD: WM_INITMENU (W)
+  CMD: COMMAND_CLOSE_FILE
+  CMD: WM_CLOSE (W)
+    Set Turing Values - Window: 105b8 - fileno: 0 - sizeptr: 0 - where: 53
+  CMD: WM_ACTIVATE (W)
+  CMD: WM_DESTROY (W)
+  CMD: WM_ACTIVATE (W)
+
+
+
+The environment has experienced an unexpected internal error.
+
+This error is caused by a bug in the environment and is not your fault!
+Details about the crash have been saved in the file "C:\Users\harry\Documents\Turing\RoboGame\panic.log".
+
+If possible, please e-mail this file to trishume@me.com
+
+Here are some details about the error:
+   Error = Wrong window type for call (-999/101) (6016)
+   File = ..\..\ready\src\eddisp.c
+   Line = 6803
+
+All unsaved open files will be saved with a ".sav" or ".sv#" extension.
+
+Not enough space for modules.
+
+
+------------------------------------------------------
